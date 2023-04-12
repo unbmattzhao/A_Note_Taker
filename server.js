@@ -30,8 +30,7 @@ app.get('/api/notes', (req, res)=>{
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 })
 
-  // readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
-
+//sets up a route to handle a POST request to create a new note.  
 app.post('/api/notes', (req, res)=>{
     console.info(`${req.method} request received to add a new note`)
     const { title, text } = req.body;
@@ -60,6 +59,7 @@ app.post('/api/notes', (req, res)=>{
 
 })
 
+// sets up a route to handle a DELETE request to remove a note from the database. 
 app.delete(`/api/notes/:id`, (req, res)=>{
     const id = req.params.id;
     const noteToDelete = db.find(el => el.id === id);
@@ -78,11 +78,13 @@ app.delete(`/api/notes/:id`, (req, res)=>{
     });
  })
  
-
+// sets up a get request for all other routes as requested.
 app.get('*', (req, res)=>{
     res.sendFile(`${__dirname}/public/index.html`)
     
 })
+
+// listening the port
 app.listen(PORT, ()=>
 {
     console.log(`Sever started, listening on PORT: ${PORT}!`);

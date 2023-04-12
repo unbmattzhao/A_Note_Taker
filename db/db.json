@@ -1,1 +1,27 @@
-[]
+[
+    {
+        "title": "Add and Save a New Note",
+        "text": "When the title and contents are added, a save button will appear.\nClick the save button and the note will be saved.",
+        "id": "59ce"
+    },
+    {
+        "title": "Delete Notes",
+        "text": "If a user clicks the red delete button, this note will be deleted.",
+        "id": "6e02"
+    },
+    {
+        "title": "Review Note",
+        "text": "Click the title of the saved notes,\nA user can review this note.\nBe aware not to click the delete button if you want to review it only.",
+        "id": "5fb5"
+    },
+    {
+        "title": "Create a New Note",
+        "text": "When a note is saved, a user will be shown a new blank note input area and the user may input new notes.\nWhen reviewing a saved note, the user needs to click the '+' icon on the right top to create a new note",
+        "id": "1bd8"
+    },
+    {
+        "title": "Get, Post and Delete",
+        "text": "* `GET /notes` returns the `notes.html` file.\n* `GET *` returns the `index.html` file.\n* `GET /api/notes` reads the `db.json` file and returns all saved notes as JSON.\n* `POST /api/notes` receives a new note to save on the request body, adds it to the `db.json` file, and then returns the new note to the client. \n* `DELETE /api/notes/:id` receives a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.",
+        "id": "650a"
+    }
+]
