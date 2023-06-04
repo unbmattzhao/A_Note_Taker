@@ -25,7 +25,7 @@ When reviewing a saved note, the user needs to click the '+' icon on the right t
 * `DELETE /api/notes/:id` receives a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
 
 ## Links
-* The App https://infinite-sea-31530.herokuapp.com/
+* The App https://new-note-taker.herokuapp.com/
 
 * The code https://github.com/unbmattzhao/A_Note_Taker
 
